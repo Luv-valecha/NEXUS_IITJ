@@ -1,40 +1,109 @@
+import { motion, useReducedMotion } from "framer-motion";
 import { aboutData } from "../data/about";
 
+const container = {
+  hidden: { opacity: 0 },
+  visible: (reduced) => ({
+    opacity: 1,
+    transition: {
+      staggerChildren: reduced ? 0 : 0.15,
+      delayChildren: reduced ? 0 : 0.1,
+    },
+  }),
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (reduced) => ({
+    opacity: 1,
+    y: 0,
+    transition: reduced
+      ? { duration: 0.2 }
+      : { type: "spring", stiffness: 60, damping: 16 },
+  }),
+};
+
 const About = () => {
+  const reduced = useReducedMotion();
+
   return (
-    <section className="min-h-screen px-6 py-20 text-white max-w-6xl mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-8">
+    <motion.section
+      className="min-h-screen px-6 py-20 text-white max-w-6xl mx-auto"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+      custom={reduced}
+    >
+      {/* Title */}
+      <motion.h1
+        variants={item}
+        custom={reduced}
+        className="text-4xl md:text-5xl font-bold text-center mb-8"
+      >
         About Us
-      </h1>
+      </motion.h1>
 
-      <p className="text-gray-300 text-lg leading-relaxed text-center mb-10">
+      {/* Description */}
+      <motion.p
+        variants={item}
+        custom={reduced}
+        className="text-gray-300 text-lg leading-relaxed text-center mb-12"
+      >
         {aboutData.description}
-      </p>
+      </motion.p>
 
-      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8 mb-12">
+      {/* Vision */}
+      <motion.div
+        variants={item}
+        custom={reduced}
+        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8 mb-16"
+      >
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Our Vision
         </h2>
         <p className="text-gray-300 text-center">
           {aboutData.vision}
         </p>
-      </div>
+      </motion.div>
 
-      <h2 className="text-2xl font-semibold mb-6 text-center">
+      {/* Highlights Title */}
+      <motion.h2
+        variants={item}
+        custom={reduced}
+        className="text-2xl font-semibold mb-8 text-center"
+      >
         What We Do
-      </h2>
+      </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {aboutData.highlights.map((item, index) => (
-          <div
+      {/* Highlights Grid */}
+      <motion.div
+        variants={container}
+        custom={reduced}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {aboutData.highlights.map((itemText, index) => (
+          <motion.div
             key={index}
-            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:scale-105 transition"
+            variants={item}
+            custom={reduced}
+            whileHover={
+              reduced
+                ? {}
+                : { y: -6, scale: 1.03 }
+            }
+            className="
+              bg-white/10 backdrop-blur-md border border-white/20
+              rounded-xl p-6 transition-transform
+            "
           >
-            <p className="text-lg">{item}</p>
-          </div>
+            <p className="text-lg text-gray-200">
+              {itemText}
+            </p>
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import SpaceScene from "./components/SpaceScene";
-import Website from "./components/Website";
-import Navbar from "./components/Navbar";
-import PlaceholderPage from "./components/PlaceholderPage";
-import Events from "./pages/Events";
-import Gallery from "./pages/Gallery";
+const Website = lazy(() => import("./components/Website"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const PlaceholderPage = lazy(() => import("./components/PlaceholderPage"));
+const Events = lazy(() => import("./pages/Events"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const About = lazy(() => import("./pages/About"));
+const Team = lazy(() => import("./pages/Team"));
 
 function Layout() {
   const location = useLocation();
@@ -14,27 +17,47 @@ function Layout() {
   return (
     <>
       <div className="fixed inset-0 -z-10">
+        <div
+          className="
+            absolute inset-0
+            bg-cover bg-center
+            bg-no-repeat
+          "
+          style={{
+            backgroundImage: "url(/textures/stars3.jpg)",
+          }}
+        />
+
         <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
-          <SpaceScene isHome={isHome} />
+          <Suspense fallback={null}>
+            <SpaceScene isHome={isHome} />
+          </Suspense>
         </Canvas>
       </div>
 
-      {/* FIXED NAVBAR */}
-      <Navbar />
+      <Suspense fallback={null}>
+        <Navbar />
+      </Suspense>
 
-      {/* CONTENT ROUTES */}
-      <Routes>
-        <Route path="/" element={<Website />} />
-        <Route path="/projects" element={<PlaceholderPage title="Projects" />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/gallery" element={<Gallery />} />
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center h-screen text-white">
+            Loading…
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Website />} />
+          <Route path="/projects" element={<PlaceholderPage title="Projects" />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/gallery" element={<Gallery />} />
 
-        {/* Other Routes */}
-        <Route path="/about" element={<PlaceholderPage title="About Us" />} />
-        <Route path="/team" element={<PlaceholderPage title="Team" />} />
-        <Route path="/calendar" element={<PlaceholderPage title="Astronomy Calendar" />} />
-        <Route path="/competitions" element={<PlaceholderPage title="Competitions" />} />
-      </Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/calendar" element={<PlaceholderPage title="Astronomy Calendar" />} />
+          <Route path="/competitions" element={<PlaceholderPage title="Competitions" />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

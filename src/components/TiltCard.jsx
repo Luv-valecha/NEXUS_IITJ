@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import { useRef, useState} from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 const cardVariants = {
@@ -45,6 +45,8 @@ export default function TiltCard({ item, onClick }) {
         y.set(0);
     };
 
+    const [loaded, setLoaded] = useState(false);
+
     return (
         <motion.div
             variants={cardVariants}
@@ -61,13 +63,18 @@ export default function TiltCard({ item, onClick }) {
             >
 
                 <div className="relative overflow-hidden">
+
                     <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"
+                        onLoad={() => setLoaded(true)}
+                        className={`
+                            w-full h-auto object-cover
+                            transition-all duration-700
+                            ${loaded ? "opacity-100 scale-105" : "opacity-0 scale-100"}
+                        `}
                     />
-
 
                     <div className="absolute top-0 left-0 w-full h-[2px] bg-[var(--accent-cyan)] opacity-0 group-hover:opacity-100 group-hover:animate-scan shadow-[0_0_10px_var(--accent-cyan)] pointer-events-none" />
                 </div>

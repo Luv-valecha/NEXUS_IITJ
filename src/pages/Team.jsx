@@ -1,7 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { coordinators, coreTeam, webTeam } from "../data/team";
+import { coordinators, coreTeam, Faculty, webTeam } from "../data/team";
 import TeamCard from "../components/Team/TeamCard";
 import CoreTeamCard from "../components/Team/CoreTeamCard"
+import FacultyCoordinatorCard from "../components/Team/FacultyCoordinatorCard";
 
 const container = {
   hidden: { opacity: 0 },
@@ -47,6 +48,22 @@ const Team = () => {
       >
         Meet Our Team
       </motion.h1>
+
+      <motion.div
+        variants={item}
+        custom={reduced}
+      >
+        <FacultyCoordinatorCard coordinator={Faculty} />
+      </motion.div>
+
+      {/* Coordinators */}
+      <motion.h2
+        variants={item}
+        custom={reduced}
+        className="text-3xl md:text-4xl font-bold text-center mt-20 mb-10"
+      >
+        Coordinators
+      </motion.h2>
 
       {/* Coordinators */}
       <motion.div

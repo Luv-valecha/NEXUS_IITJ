@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { coordinators, coreTeam } from "../data/team";
+import { coordinators, coreTeam, webTeam } from "../data/team";
 import TeamCard from "../components/Team/TeamCard";
 import CoreTeamCard from "../components/Team/CoreTeamCard"
 
@@ -52,7 +52,7 @@ const Team = () => {
       <motion.div
         variants={container}
         custom={reduced}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
       >
         {coordinators.map((member) => (
           <TeamCard key={member.id} member={member} />
@@ -71,9 +71,27 @@ const Team = () => {
       <motion.div
         variants={container}
         custom={reduced}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
       >
         {coreTeam.map((member) => (
+          <CoreTeamCard key={member.id} member={member} />
+        ))}
+      </motion.div>
+
+      <motion.h2
+        variants={item}
+        custom={reduced}
+        className="text-3xl md:text-4xl font-bold text-center mt-20 mb-10"
+      >
+        Web Team
+      </motion.h2>
+
+      <motion.div
+        variants={container}
+        custom={reduced}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
+      >
+        {webTeam.map((member) => (
           <CoreTeamCard key={member.id} member={member} />
         ))}
       </motion.div>

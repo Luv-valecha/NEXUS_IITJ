@@ -61,11 +61,11 @@ const TeamCard = ({ member = {} }) => {
         relative rounded-2xl overflow-hidden
         bg-gradient-to-b from-blue-600/20 to-cyan-400/10
         backdrop-blur-lg
-        border border-cyan-400/30
+        border border-cyan-400/30 w-64 sm:w-72
       "
     >
       {/* IMAGE */}
-      <div className="relative h-52 overflow-hidden">
+      <div className="relative h-40 overflow-hidden">
         <img
           src={image || placeholderImage}
           alt={name}

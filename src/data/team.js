@@ -1,7 +1,7 @@
 export const coordinators = [
   {
     id: 1,
-    name: "Mahi Upadhyay",
+    name: "Shiv Jee Yadav",
     role: "Coordinator",
     links: {
       linkedin: "#",
@@ -21,7 +21,7 @@ export const coordinators = [
   },
   {
     id: 3,
-    name: "Shiv Jee Yadav",
+    name: "Mahi Upadhyay",
     role: "Coordinator",
     links: {
       linkedin: "#",
@@ -200,6 +200,49 @@ export const coreTeam = [
       linkedin: "#",
       instagram: "#",
       github: "#",
+    },
+  },
+];
+
+export const webTeam = [
+  {
+    id: 1,
+    name: "Udit Chand Narayan",
+    role: "Web Team",
+    links: {
+      linkedin: "#",
+      instagram: "#",
+      github: "https://github.com/anoonimouse",
+    },
+  },
+  {
+    id: 2,
+    name: "Divyansh Malik",
+    role: "Web Team",
+    links: {
+      linkedin: "#",
+      instagram: "#",
+      github: "https://github.com/beepboop876",
+    },
+  },
+  {
+    id: 3,
+    name: "Anmol Mishra",
+    role: "Web Team",
+    links: {
+      linkedin: "#",
+      instagram: "#",
+      github: "https://github.com/anmolm-777",
+    },
+  },
+  {
+    id: 4,
+    name: "Anurag Samota",
+    role: "Web Team",
+    links: {
+      linkedin: "#",
+      instagram: "#",
+      github: "https://github.com/anuragsamota",
     },
   },
 ];

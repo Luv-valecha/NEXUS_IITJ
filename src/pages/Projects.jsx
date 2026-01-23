@@ -10,6 +10,7 @@ import DetailedProjectCard from '../components/Project/DetailedProjectCard';
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [activeProject, setActiveProject] = useState(null);
+  const [view, setView] = useState("list");
 
   const filteredProjects = projects.filter(project => {
     const categoryMatch = selectedCategory === "All" || project.category === selectedCategory;
@@ -20,8 +21,28 @@ export default function Projects() {
   useEffect(() => {
     if (filteredProjects.length > 0) {
       setActiveProject(filteredProjects[0]);
+      setView("list");
     }
   }, [selectedCategory]);
+
+  const swipeVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 300 : -300,
+      opacity: 0,
+    }),
+  };
+
+  const swipeConfidenceThreshold = 100;
+  const swipePower = (offset, velocity) =>
+    Math.abs(offset) * velocity;
 
   return (
     <div className="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8">
@@ -110,7 +131,54 @@ export default function Projects() {
 
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 h-[calc(100vh-7rem)]">
+        {/* MOBILE */}
+        <div className="lg:hidden relative overflow-hidden">
+          <motion.div
+            key={view}
+            custom={view === "detail" ? 1 : -1}
+            variants={swipeVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+
+              if (swipe < -swipeConfidenceThreshold && view === "list") {
+                setView("detail");
+              } else if (swipe > swipeConfidenceThreshold && view === "detail") {
+                setView("list");
+              }
+            }}
+          >
+            {view === "list" ? (
+              <div className="space-y-4">
+                {filteredProjects.map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    isActive={false}
+                    setActiveProject={(p) => {
+                      setActiveProject(p);
+                      setView("detail");
+                    }}
+                  />
+                ))}
+              </div>
+            ) : (
+              <DetailedProjectCard
+                activeProject={activeProject}
+                onBack={() => setView("list")}
+              />
+            )}
+          </motion.div>
+        </div>
+
+        {/* DESKTOP */}
+        <div className="hidden lg:grid grid-cols-[2fr_3fr] gap-8 h-[calc(100vh-7rem)]">
           <div className="overflow-y-auto hide-scrollbar pr-2 space-y-4">
             {filteredProjects.map((project) => {
               const isActive = activeProject?.id === project.id;
@@ -125,16 +193,18 @@ export default function Projects() {
             })}
           </div>
 
-          <div className="h-full">
-            {activeProject ? (
+          <motion.div
+            key={activeProject?.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            {activeProject && (
               <DetailedProjectCard activeProject={activeProject} />
-            ) : (
-              <div className="h-full flex items-center justify-center text-gray-400">
-                Select a project to view details
-              </div>
             )}
-          </div>
+          </motion.div>
         </div>
+
 
         {/* Empty State */}
         {filteredProjects.length === 0 && (

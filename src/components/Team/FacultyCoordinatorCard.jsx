@@ -34,13 +34,14 @@ const FacultyCoordinatorCard = ({ coordinator = {} }) => {
                     }
             }
             className="
-                max-w-255 ml-11
+                max-w-255 mx-auto sm:ml-11 sm:mr-0
                 flex flex-col sm:flex-row
                 rounded-2xl overflow-hidden
                 bg-gradient-to-b from-blue-600/20 to-cyan-400/10
                 backdrop-blur-lg
                 border border-cyan-400/30 w-full
-            "
+                "
+
         >
             {/* IMAGE SECTION */}
             <div className="relative w-full sm:w-64 h-64 sm:h-auto shrink-0">

@@ -9,16 +9,16 @@ export const coordinators = [
       github: "https://github.com/ShivJee-Yadav/",
     },
   },
-  // {
-  //   id: 2,
-  //   name: "Prushti Thumar",
-  //   role: "Coordinator",
-  //   links: {
-  //     linkedin: "#",
-  //     instagram: "#",
-  //     github: "#",
-  //   },
-  // },
+  {
+    id: 2,
+    name: "Prushti Thumar",
+    role: "Coordinator",
+    links: {
+      linkedin: "#",
+      instagram: "#",
+      github: "#",
+    },
+  },
   {
     id: 3,
     name: "Mahi Upadhyay",

@@ -33,15 +33,40 @@ export default function DetailedProjectCard({ activeProject }) {
 
         {/* Meta */}
         <div className="flex flex-wrap gap-6 mb-6 text-sm text-gray-400">
-          <span className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
-            {activeProject.date}
-          </span>
-          <span className="flex items-center gap-2">
-            <Users className="w-4 h-4" />
-            {activeProject.team.join(", ")}
-          </span>
-        </div>
+  
+  {/* Date */}
+  <span className="flex items-center gap-2">
+    <Calendar className="w-4 h-4" />
+    {activeProject.date}
+  </span>
+
+  {/* Team */}
+  <div className="flex flex-col gap-2">
+    <div className="flex items-center gap-2">
+      <Users className="w-4 h-4" />
+      <span className="text-gray-300 font-medium">Team | Collaborator </span>
+    </div>
+
+    <div className="flex flex-wrap gap-2">
+      {/* Team Lead */}
+      <span className="px-3 py-1 rounded-full bg-indigo-500/40 text-gray-300 border border-indigo-500/30">
+        {activeProject.team[0]} <span className="ml-1 text-m">(Lead)</span>
+      </span>
+
+      {/* Other Members */}
+      {activeProject.team.slice(1).map((member, idx) => (
+        <span
+          key={idx}
+          className="px-3 py-1 rounded-full bg-indigo-500/20 text-gray-300 border border-gray-600"
+        >
+          {member}
+        </span>
+      ))}
+    </div>
+  </div>
+
+</div>
+
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-6">

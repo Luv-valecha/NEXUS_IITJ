@@ -121,4 +121,4 @@ export const gallery = [
     }
 ];
 
-export const imageSubmissionForm="";
+export const imageSubmissionForm="https://forms.gle/6zd2ewQpqcvhZh4CA";

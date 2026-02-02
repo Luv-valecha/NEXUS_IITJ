@@ -3,6 +3,7 @@ import { coordinators, coreTeam, Faculty, webTeam } from "../data/team";
 import TeamCard from "../components/Team/TeamCard";
 import CoreTeamCard from "../components/Team/CoreTeamCard"
 import FacultyCoordinatorCard from "../components/Team/FacultyCoordinatorCard";
+import { sortByImage } from "../utils/imageUtils";
 
 const container = {
   hidden: { opacity: 0 },
@@ -90,7 +91,7 @@ const Team = () => {
         custom={reduced}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
       >
-        {coreTeam.map((member) => (
+        {sortByImage(coreTeam).map((member) => (
           <CoreTeamCard key={member.id} member={member} />
         ))}
       </motion.div>
@@ -108,7 +109,7 @@ const Team = () => {
         custom={reduced}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
       >
-        {webTeam.map((member) => (
+        {sortByImage(webTeam).map((member) => (
           <CoreTeamCard key={member.id} member={member} />
         ))}
       </motion.div>

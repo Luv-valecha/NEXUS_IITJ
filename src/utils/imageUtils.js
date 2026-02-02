@@ -8,3 +8,11 @@ export const getRenderableImageUrl = (url) => {
 
   return url;
 };
+
+export const sortByImage = (team) => {
+  return [...team].sort((a, b) => {
+    if (a.image && !b.image) return -1; // a first
+    if (!a.image && b.image) return 1;  // b first
+    return 0;
+  });
+};

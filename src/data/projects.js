@@ -4,7 +4,7 @@ export const projects = [
     title: "DebriSolver Competition",
     description: "Developed a Space Traffic Management system to predict collision risks for over 574,000 orbital objects. The solution features a dual-inference AI model combining PyTorch (FT-Transformer) and XGBoost/LightGBM, which achieved 1.0 precision on safety constraints through Optuna optimization. The system includes a scalable data pipeline and an interactive Streamlit dashboard.",
     image: "https://drive.google.com/file/d/1gFFcHPrONrNL9-DM7P-SFYCr6IC4WORx/view?usp=sharing",
-    category: "AI & Space Tech",
+    category: "International Competition",
     status: "Finalist",
     team: ["Shiv Jee Yadav", "Princy","Chittanoor Sri Raghava","Pratham Karmakar"],
     date: "Sep 2025 - Jan 2026",
@@ -19,9 +19,9 @@ export const projects = [
     title: "CANSAT'25 by INn -SPACe",
     description: "CANSAT by In-SPace is an educational initiative that challenges students to design, build, and operate miniature satellites to simulate real-world space missions. Our team built a CanSAT entirely from scratch, covering all domains including mechanical design, electronics, software, and payload integration. We successfully completed the Preliminary Design Review (PDR) and Critical Design Review (CDR), demonstrating our technical expertise and project management skills. Through dedication and innovation, we advanced to the finals, showcasing our ability to deliver a fully functional satellite system that met mission requirements and inspired future exploration.",
     image: "https://drive.google.com/file/d/15gy6eDFG6_oDD6h_no5JvJCtB9nDt-dF/view?usp=sharing",
-    category: "National Competition | Innovation Challenge",
+    category: "National Competition",
     status: "July 2024 - July 2025",
-    team: ["Abhiroop Bhavsar","Arafat Ahmad Sheikh","Himay Patel","Iha Goyal","Nisarg Upaddhay","Om Kumar","Pujari Mayuri Rajesh","Shiv Jee Yadav","Tanmay Daga"],
+    team: ["Iha Goyal","Abhiroop Bhavsar","Arafat Ahmad Sheikh","Himay Patel","Nisarg Upaddhay","Om Kumar","Pujari Mayuri Rajesh","Shiv Jee Yadav","Tanmay Daga"],
     date: "July 2024 - Oct 2025",
     technologies: ["Mechanical & Structural Design","Avionics & Sensors","Communication Systems","Onboard Computing & Software" ,"Power Systems","Recovery" ,"Payload"],
     links: {
@@ -34,7 +34,7 @@ export const projects = [
     title: "CANSAT'24 by INn -SPACe",
     description: "CANSAT by In-SPace is an educational initiative that challenges students to design, build, and operate miniature satellites to simulate real-world space missions. Our team built a CanSAT entirely from scratch, covering all domains including mechanical design, electronics, software, and payload integration. We successfully completed the Preliminary Design Review (PDR) and Critical Design Review (CDR), demonstrating our technical expertise and project management skills. Through dedication and innovation, we advanced to the finals, showcasing our ability to deliver a fully functional satellite system that met mission requirements and inspired future exploration.",
     image: "https://drive.google.com/file/d/15gy6eDFG6_oDD6h_no5JvJCtB9nDt-dF/view?usp=sharing",
-    category: "National Competition | Innovation Challenge",
+    category: "National Competition",
     status: "July 2024 - July 2025",
     team: ["Somshuvra Basu","Pechetti Akhil","Lokesh Tanwar","Tale Sai Saathwik","Shubham Mishra","Sarvesh Baheti","Anupama Birman","Hrishikesh Makwana"],
     date: "July 2023 - Oct 2024",
@@ -49,7 +49,7 @@ export const projects = [
   title: "Model Rocketry By IN-SPACe",
   description: "Model rocketry stands out as a unique educational and engineering pursuit because it transforms core principles of physics, chemistry, and aerodynamics into real-world flight. Our team designed, built, and launched rockets from scratch under the IN-SPACe CanSat and Model Rocketry initiative, mastering propulsion, stability, and recovery systems. By completing PDR and CDR phases and advancing to the finals, we demonstrated how model rocketry bridges classroom theory with practical aerospace innovation.",
   image: "https://drive.google.com/file/d/1bHt_IruP0ia-dagNTHxu9jPV4z0Wn0xa/view?usp=sharing",
-  category: "Aerospace Engineering",
+  category: "National Competition",
   status: "_",
   team: ["Somshuvra Basu","Lokesh Tanwar","Vinay Tailor","Shubham Mishra","Vikash Kumar","Aaditya Kamble","Shubham Tamboli","Raghav Maliwal"],
   date: "July 2024 - Mar 2025",
@@ -91,7 +91,7 @@ export const projects = [
 
 ];
 
-export const categories = ["All", "Research", "Instrumentation", "Rocketry", "Observation", "Software"];
+export const categories = ["All","National Competition","International Competition" ,"Research", "Rocketry","Software","DIY"];
 
 export const categoryStyles = {
   Astrophysics: "bg-purple-500/20 text-purple-400 border-purple-500/30",

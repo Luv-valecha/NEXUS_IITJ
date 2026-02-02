@@ -47,7 +47,8 @@ export const projects = [
   {
   id: 5,
   title: "Model Rocketry By IN-SPACe",
-  description: "Model rocketry stands out as a unique educational and engineering pursuit because it transforms core principles of physics, chemistry, and aerodynamics into real-world flight. Our team designed, built, and launched rockets from scratch under the IN-SPACe CanSat and Model Rocketry initiative, mastering propulsion, stability, and recovery systems. By completing PDR and CDR phases and advancing to the finals, we demonstrated how model rocketry bridges classroom theory with practical aerospace innovation."  image: "https://drive.google.com/file/d/1bHt_IruP0ia-dagNTHxu9jPV4z0Wn0xa/view?usp=sharing",
+  description: "Model rocketry stands out as a unique educational and engineering pursuit because it transforms core principles of physics, chemistry, and aerodynamics into real-world flight. Our team designed, built, and launched rockets from scratch under the IN-SPACe CanSat and Model Rocketry initiative, mastering propulsion, stability, and recovery systems. By completing PDR and CDR phases and advancing to the finals, we demonstrated how model rocketry bridges classroom theory with practical aerospace innovation.",
+  image: "https://drive.google.com/file/d/1bHt_IruP0ia-dagNTHxu9jPV4z0Wn0xa/view?usp=sharing",
   category: "Aerospace Engineering",
   status: "_",
   team: ["Somshuvra Basu","Lokesh Tanwar","Vinay Tailor","Shubham Mishra","Vikash Kumar","Aaditya Kamble","Shubham Tamboli","Raghav Maliwal"],

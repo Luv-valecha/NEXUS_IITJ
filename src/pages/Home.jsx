@@ -27,10 +27,11 @@ export default function Home() {
   ];
 
   const quickLinks = [
-    { name: "Events", path: "/events", icon: <Calendar className="w-5 h-5" /> },
-    { name: "Gallery", path: "/gallery", icon: <Image className="w-5 h-5" /> },
-    { name: "ISS Tracker", path: "/ISSTracker", icon: <Rocket className="w-5 h-5" /> },
-    // { name: "Team", path: "/team", icon: <Users className="w-5 h-5" /> }
+    { name: "Project", path: "/projects", icon: <Calendar className="w-5 h-5" /> },
+    { name: "Events", path: "/events", icon: <Image className="w-5 h-5" /> },
+    { name: "Gallery", path: "/gallery", icon: <Rocket className="w-5 h-5" /> },
+    { name: "Team", path: "/about", icon: <Users className="w-5 h-5" /> },
+    { name: "Astronomy Calender", path: "/calender", icon: <Users className="w-5 h-5" /> }
   ];
 
   return (

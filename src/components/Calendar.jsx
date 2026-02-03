@@ -51,26 +51,39 @@ const Calendar = () => {
     };
 
     const traverseMonth = (direction) => {
-        setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + direction, 1));
+        const nextDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + direction, 1);
+        if (nextDate.getFullYear() !== currentDate.getFullYear()) {
+            setEvents([]);
+        }
+        setCurrentDate(nextDate);
     };
 
     const formatMonth = (date) => {
         return date.toLocaleString('default', { month: 'long', year: 'numeric' }).toUpperCase();
     };
 
+    const eventsLookup = useMemo(() => {
+        const lookup = {};
+        events.forEach(event => {
+            if (!lookup[event.date]) lookup[event.date] = [];
+            lookup[event.date].push(event);
+        });
+        return lookup;
+    }, [events]);
+
     const getEventsForDay = (day) => {
-        const checkDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
-        // Adjust for timezone
-        const offset = checkDate.getTimezoneOffset();
-        const localDate = new Date(checkDate.getTime() - (offset * 60 * 1000));
-        const dateString = localDate.toISOString().split('T')[0];
-        return events.filter(event => event.date === dateString);
+        const year = currentDate.getFullYear();
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+        const dayStr = String(day).padStart(2, '0');
+        const dateKey = `${year}-${month}-${dayStr}`;
+        return eventsLookup[dateKey] || [];
     };
 
+    // Optimized list for the "List View"
     const currentMonthEvents = useMemo(() => {
-        const m = currentDate.getMonth() + 1; // 1-12
-        const y = currentDate.getFullYear();
-        const prefix = `${y}-${m < 10 ? '0' + m : m}`;
+        const year = currentDate.getFullYear();
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+        const prefix = `${year}-${month}`;
         return events.filter(e => e.date.startsWith(prefix));
     }, [events, currentDate]);
 
@@ -249,7 +262,7 @@ const Calendar = () => {
                                                             alt=""
                                                             className="w-full h-full object-cover"
                                                         />
-                                                        
+
                                                         <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b14] via-transparent to-transparent opacity-90" />
                                                     </div>
                                                 ))}

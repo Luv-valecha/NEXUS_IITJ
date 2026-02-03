@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flameGradient" x1="125" y1="200" x2="125" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="50%" stop-color="#FF5500"/>
+      <stop offset="100%" stop-color="#000099" stop-opacity="0"/>
+    </linearGradient>
+    
+    <filter id="shadow" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="4" dy="4" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+
+  <path d="M160 120 L330 430 L330 430 L410 430 L410 80 L330 80 L330 310 L190 60 L160 60 Z" fill="#000099"/>
+
+  <path d="M125 50 C125 50 160 90 160 140 L160 170 L145 160 L125 180 L105 160 L90 170 L90 140 C90 90 125 50 125 50 Z" fill="#000099"/>
+  
+  <circle cx="125" cy="110" r="10" fill="white"/>
+
+  <path d="M105 180 Q 125 200 145 180 L 145 350 Q 125 450 105 350 Z" fill="url(#flameGradient)"/>
+  
+  </svg>

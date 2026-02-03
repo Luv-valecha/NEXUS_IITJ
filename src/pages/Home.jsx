@@ -30,7 +30,7 @@ export default function Home() {
     { name: "Events", path: "/events", icon: <Calendar className="w-5 h-5" /> },
     { name: "Gallery", path: "/gallery", icon: <Image className="w-5 h-5" /> },
     { name: "ISS Tracker", path: "/ISSTracker", icon: <Rocket className="w-5 h-5" /> },
-    { name: "Team", path: "/team", icon: <Users className="w-5 h-5" /> }
+    // { name: "Team", path: "/team", icon: <Users className="w-5 h-5" /> }
   ];
 
   return (
@@ -225,7 +225,7 @@ export default function Home() {
               Join NEXUS and be part of a community that shares your passion for the cosmos
             </p>
             <Link
-              to="/team"
+              to="/about"
               className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
             >
               Meet the Team

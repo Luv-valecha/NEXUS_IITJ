@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
 import { socialLinks } from "../data/team";
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
-
+import { useState } from "react";
 const container = {
   hidden: { opacity: 0 },
   visible: (reduced) => ({
@@ -37,11 +37,46 @@ const iconVariants = {
 
 const Contact = () => {
   const reduced = useReducedMotion();
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // connect EmailJS / backend here
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus("Sending...");
+
+  const form = e.target;
+  const formData = new FormData();
+
+  // Your fields
+  formData.append("entry.790456632", form.name.value);
+  formData.append("entry.1916927500", form.email.value);
+  formData.append("entry.1429768268", form.message.value);
+
+  // Required Google internal fields
+  formData.append("fvv", "1");
+  formData.append("draftResponse", "[]");
+  formData.append("pageHistory", "0");
+  formData.append("fbzx", Date.now().toString());
+  formData.append("submit", "Submit");   // 
+
+  try {
+    await fetch(
+      "https://docs.google.com/forms/d/e/1FAIpQLSdz9NQ8N8kNsqG8KRLqhN09lnwJ4BKxUzpWoalRLt0Uyu_8wA/formResponse",
+      {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      }
+    );
+
+    setStatus("Message sent successfully!");
+    form.reset();
+  } catch (err) {
+    setStatus("Something went wrong.");
+  }
+};
+
+// https://docs.google.com/forms/d/e/1FAIpQLSdz9NQ8N8kNsqG8KRLqhN09lnwJ4BKxUzpWoalRLt0Uyu_8wA/viewform?usp=pp_url&entry.790456632=asdf&entry.1916927500=gmai.@gmal&entry.1429768268=Short
+
 
   return (
     <motion.section
@@ -84,6 +119,7 @@ const Contact = () => {
           shadow-[0_0_40px_rgba(59,130,246,0.25)]
           space-y-6
         "
+        
       >
         {/* Name */}
         <div>
@@ -91,6 +127,7 @@ const Contact = () => {
             Your Name
           </label>
           <input
+            name="name"
             type="text"
             required
             className="
@@ -111,6 +148,7 @@ const Contact = () => {
             Email Address
           </label>
           <input
+            name="email"
             type="email"
             required
             className="
@@ -131,6 +169,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
+            name="message"
             rows="5"
             required
             className="

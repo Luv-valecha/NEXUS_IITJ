@@ -77,7 +77,7 @@ export default function Home() {
                 </p>
                 <div className="h-px bg-linear-to-r from-transparent via-blue-500 to-transparent w-24"></div>
               </div>
-              <p className="text-gray-400 text-sm sm:text-base tracking-widest uppercase">
+              <p className="text-white text-sm sm:text-base tracking-widest uppercase">
                 Indian Institute of Technology Jodhpur
               </p>
             </motion.div>

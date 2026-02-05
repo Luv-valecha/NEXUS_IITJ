@@ -50,6 +50,7 @@ function Layout() {
       alt="Voyager Golden Disc"
       className="w-[100vmin] h-[100vmin] animate-spin-slow"
     />
+    <div className="absolute inset-0 bg-black/40"></div>
   </div>
 
         {/* 3D Canvas - only render if WebGL available and not mobile */}

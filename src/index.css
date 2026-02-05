@@ -73,3 +73,12 @@ body,
 .hide-scrollbar::-webkit-scrollbar {
   display: none;             /* Chrome, Safari */
 }
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 120s linear infinite;
+  }
+}
+
+
+

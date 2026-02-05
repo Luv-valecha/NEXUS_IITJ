@@ -34,13 +34,23 @@ function Layout() {
   return (
     <>
       <div className="fixed inset-0 -z-10">
-        {/* Fallback static background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url(/textures/stars3.jpg)",
-          }}
-        />
+
+  {/* Static space background */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-black"
+    // style={{
+    //   backgroundImage: "url(/textures/stars3.jpg)",
+    // }}
+  />
+
+  {/* Rotating Golden Disc */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <img
+      src="/textures/stars3.jpg"
+      alt="Voyager Golden Disc"
+      className="w-[100vmin] h-[100vmin] animate-spin-slow"
+    />
+  </div>
 
         {/* 3D Canvas - only render if WebGL available and not mobile */}
         {use3D && (

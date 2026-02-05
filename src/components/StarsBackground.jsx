@@ -16,8 +16,8 @@ export default function StarsBackground({ texture }) {
 
         mesh.current.position.copy(camera.position);
 
-        mesh.current.rotation.y += delta * 0.005;
-        mesh.current.rotation.x += delta * 0.001;
+        mesh.current.rotation.y += delta * 0.001;
+        mesh.current.rotation.x += delta * 0.005;
         // Animate texture offset for a drifting effect
         map.offset.x += delta * 0.00002;
         map.offset.y += delta * 0.00001;

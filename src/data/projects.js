@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "CANSAT'25 by INn -SPACe",
+    title: "CANSAT'25 by IN-SPACe",
     description: "CANSAT by In-SPace is an educational initiative that challenges students to design, build, and operate miniature satellites to simulate real-world space missions. Our team built a CanSAT entirely from scratch, covering all domains including mechanical design, electronics, software, and payload integration. We successfully completed the Preliminary Design Review (PDR) and Critical Design Review (CDR), demonstrating our technical expertise and project management skills. Through dedication and innovation, we advanced to the finals, showcasing our ability to deliver a fully functional satellite system that met mission requirements and inspired future exploration.",
     image: "https://drive.google.com/file/d/15gy6eDFG6_oDD6h_no5JvJCtB9nDt-dF/view?usp=sharing",
     category: "National Competition",
@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "CANSAT'24 by INn -SPACe",
+    title: "CANSAT'24 by IN-SPACe",
     description: "CANSAT by In-SPace is an educational initiative that challenges students to design, build, and operate miniature satellites to simulate real-world space missions. Our team built a CanSAT entirely from scratch, covering all domains including mechanical design, electronics, software, and payload integration. We successfully completed the Preliminary Design Review (PDR) and Critical Design Review (CDR), demonstrating our technical expertise and project management skills. Through dedication and innovation, we advanced to the finals, showcasing our ability to deliver a fully functional satellite system that met mission requirements and inspired future exploration.",
     image: "https://drive.google.com/file/d/15gy6eDFG6_oDD6h_no5JvJCtB9nDt-dF/view?usp=sharing",
     category: "National Competition",
@@ -73,21 +73,21 @@ export const projects = [
     links: {
       documentation: "#"
     }
+  },
+  {
+    id: 7,
+    title: "Direct Georeferencing of CanSat Aerial Imagery",
+    description: "The team demonstrated that a compact CanSat called NexSat can produce accurately georeferenced aerial imagery without ground control points by integrating MEMS inertial sensors, a multi‑constellation GNSS receiver, and a calibrated OV2640 camera driven by an ESP32 to generate orthorectified mosaics and quantify performance with pixel‑level error metrics; NexSat flew a controlled descent using a dual‑parachute system and passive spring‑based fins to stabilize roll and maintain predictable imaging geometry, while GNSS timestamps synchronized to launchpad time and Madgwick‑filtered IMU quaternions provided time‑aligned position and attitude for each exposure. The processing chain corrected payload mounting offsets, converted coordinates from payload → NED → ECEF → geodetic frames, and used a photogrammetric collinearity model to form camera look vectors that were intersected with the WGS84 ellipsoid and then refined with a local DEM via ray tracing to produce per‑frame ground footprints and orthorectified frames. Hardware and calibration steps included multi‑constellation GNSS, a pressure altimeter for cross‑checks, PRNU/DSNU corrections using dark frames and flat fields, and an OV2640 sensor (1280×1024, 3.6 mm focal length, 66° FOV); results showed combined RMS georeferencing errors on the order of tens of pixels, with primary error sources traced to residual mechanical misalignments and timing/fusion inconsistencies, and recommended mitigations include tighter mechanical alignment, improved time synchronization, and more robust sensor‑fusion algorithms, enabling rapid, low‑cost localized mapping for environmental monitoring, disaster response, ISR, and potential adaptation to descent imagers or impact probes for planetary missions.",
+    image: "https://drive.google.com/file/d/1jOXNLvA_kCb83BVqhgttTeBnKNHeRaxD/view?usp=sharing",
+    category: "Research",
+    status: "Completed",
+    team: ["","Somshuvra Basu","Radha Krishna Kavuluru"],
+    date: "Aug 2024 - May 2025",
+    technologies: ["MEMS IMU (quaternions)", "Multi-constellation GNSS (GPS/GLONASS/BDS/Galileo)", "OV2640 image sensor", "ESP32 SoC", "Madgwick sensor-fusion filter", "Photogrammetric collinearity model", "Ray-tracing with DEM", "pymap3d"],
+    links: {
+      documentation: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10983993"
+    }
   }
-  // {
-  //   id: 7,
-  //   title: "Solar Activity Monitoring",
-  //   description: "Daily monitoring and documentation of sunspots, solar flares, and coronal mass ejections to study solar cycles.",
-  //   image: "https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=800",
-  //   category: "Research",
-  //   status: "ongoing",
-  //   team: ["Solar Team"],
-  //   date: "2024 - Present",
-  //   technologies: ["H-alpha Telescopes", "Time-series Analysis"],
-  //   links: {
-  //     documentation: "#"
-  //   }
-  // }
 
 ];
 

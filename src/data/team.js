@@ -323,7 +323,7 @@ export const Faculty = {
   position: "Faculty Advisor",
   description:
     "Dr. Monika Sinha is an Associate Professor in the Department of Physics at IIT Jodhpur and has been with the institute since 2011, initially joining as an Assistant Professor. Previously, she was an Alexander von Humboldt Fellow at the Institute of Theoretical Physics, J. W. Goethe University, Frankfurt, Germany. Her earlier positions include Centenary Fellow at the Indian Institute of Science (IISc), Bangalore, and Research Associate in the Theory Division of the Saha Institute of Nuclear Physics, Kolkata. She earned his Ph.D. from Jadavpur University in 2006.",
-  image: "/textures/faculty.jpg",
+  image: "https://drive.google.com/file/d/1CSqADQphnobmHYQGtmXot4vb5_a067H5/view?usp=sharing",
   scholar: "https://scholar.google.com/citations?user=2Dut95kAAAAJ&hl=en"
 }
 

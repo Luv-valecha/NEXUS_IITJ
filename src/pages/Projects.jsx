@@ -4,6 +4,7 @@ import { ExternalLink, Github, Calendar, Users, ChevronRight } from 'lucide-reac
 import { projects, categories, categoryStyles } from "../data/projects"
 import ProjectCard from '../components/Project/ProjectCard';
 import DetailedProjectCard from '../components/Project/DetailedProjectCard';
+import ShinyText from '../components/ShinyText';
 
 // const statuses = ["All", "Ongoing", "Completed"];
 
@@ -55,10 +56,22 @@ export default function Projects() {
           className="text-center mb-12"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-            <span className="text-white">OUR </span>
+            {/* <span className="text-white">OUR </span>
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-500">
               PROJECTS
-            </span>
+            </span> */}
+            <ShinyText
+                  text="OUR PROJECTS"
+                  speed={5}
+                  delay={0}
+                  color="#9DDEE0"
+                  shineColor="#69DEE0"
+                  spread={120}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
           </h1>
           <p className="text-white text-lg max-w-3xl mx-auto">
             Explore our diverse range of projects spanning astrophysics research,

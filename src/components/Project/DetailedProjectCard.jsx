@@ -49,9 +49,9 @@ export default function DetailedProjectCard({ activeProject }) {
 
     <div className="flex flex-wrap gap-2">
       {/* Team Lead */}
-      <span className="px-3 py-1 rounded-full bg-indigo-500/40 text-gray-300 border border-indigo-500/30">
+      {activeProject.team[0] && <span className="px-3 py-1 rounded-full bg-indigo-500/40 text-gray-300 border border-indigo-500/30">
         {activeProject.team[0]} <span className="ml-1 text-m">(Lead)</span>
-      </span>
+      </span>}
 
       {/* Other Members */}
       {activeProject.team.slice(1).map((member, idx) => (

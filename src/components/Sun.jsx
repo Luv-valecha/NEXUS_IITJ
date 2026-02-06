@@ -45,7 +45,7 @@ export default function Sun({ texture }) {
         <>
             {/* Sun mesh */}
             <mesh ref={sunRef} position={[10, 0, -60]}>
-                <sphereGeometry args={[6, 64, 64]} />
+                <sphereGeometry args={[10, 64, 64]} />
                 <meshBasicMaterial
                     map={map}
                     toneMapped={false}

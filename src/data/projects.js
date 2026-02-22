@@ -25,7 +25,7 @@ export const projects = [
     date: "July 2024 - Oct 2025",
     technologies: ["Mechanical & Structural Design","Avionics & Sensors","Communication Systems","Onboard Computing & Software" ,"Power Systems","Recovery" ,"Payload"],
     links: {
-      // github: "#",
+      documentation:"https://drive.google.com/file/d/1YhWxgXeDM9d3Ii0G_D1IQRjG7cxsEXlo/view?usp=sharing"
       // paper: "#"
     }
   },
@@ -33,7 +33,7 @@ export const projects = [
     id: 3,
     title: "CANSAT'24 by IN-SPACe",
     description: "CANSAT by In-SPace is an educational initiative that challenges students to design, build, and operate miniature satellites to simulate real-world space missions. Our team built a CanSAT entirely from scratch, covering all domains including mechanical design, electronics, software, and payload integration. We successfully completed the Preliminary Design Review (PDR) and Critical Design Review (CDR), demonstrating our technical expertise and project management skills. Through dedication and innovation, we advanced to the finals, showcasing our ability to deliver a fully functional satellite system that met mission requirements and inspired future exploration.",
-    image: "https://drive.google.com/file/d/15gy6eDFG6_oDD6h_no5JvJCtB9nDt-dF/view?usp=sharing",
+    image: "https://drive.google.com/file/d/1-aXkn_uVfWuib4ZObLbDyzraIOI8wW52/view?usp=sharing",
     category: "National Competition",
     status: "Completed",
     team: ["Somshuvra Basu","Pechetti Akhil","Lokesh Tanwar","Tale Sai Saathwik","Shubham Mishra","Sarvesh Baheti","Anupama Birman","Hrishikesh Makwana"],
@@ -55,6 +55,7 @@ export const projects = [
   date: "July 2024 - Mar 2025",
   technologies: [ "Aerodynamics & Aviation Systems", "Propulsion Technologies", "Avionics & Control Systems", "Structural & Materials Engineering", "Recovery Mechanisms", "Systems Integration" ],
   links: {
+    documentation: "https://drive.google.com/file/d/1CN0BayEkdE5vZ2agA2GZkRpkKGoiKCYX/view?usp=sharing"
       // github: "#",
       // paper: "#"
   }
@@ -86,6 +87,7 @@ export const projects = [
     technologies: ["MEMS IMU (quaternions)", "Multi-constellation GNSS (GPS/GLONASS/BDS/Galileo)", "OV2640 image sensor", "ESP32 SoC", "Madgwick sensor-fusion filter", "Photogrammetric collinearity model", "Ray-tracing with DEM", "pymap3d"],
     links: {
       documentation: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10983993"
+      
     }
   }
 

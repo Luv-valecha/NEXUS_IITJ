@@ -55,17 +55,17 @@ function Layout() {
         <div className="absolute inset-0">
             <div 
               
-              className="absolute w-1px h-1px rounded-full bg-transparent animate-pulse"
+              className="absolute w-[1px] h-[1px] rounded-full bg-transparent animate-pulse"
               style={{ boxShadow: smallStars, animationDuration: '4s' }} 
             />
             <div 
             
-              className="absolute w-2px h-2px rounded-full bg-transparent animate-pulse"
+              className="absolute w-[2px] h-[2px] rounded-full bg-transparent animate-pulse"
               style={{ boxShadow: mediumStars, animationDuration: '3s', opacity: 0.8 }} 
             />
             <div 
    
-              className="absolute w-3px h-3px rounded-full bg-transparent animate-pulse"
+              className="absolute w-[3px] h-[3px] rounded-full bg-transparent animate-pulse"
               style={{ boxShadow: largeStars, animationDuration: '1.5s', opacity: 0.6 }} 
             />
         </div>

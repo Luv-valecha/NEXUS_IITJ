@@ -6,7 +6,7 @@ export const events = [
     description: "This evening, we have a unique opportunity to observe a rare celestial event—a planetary alignment featuring six planets! Join us as we marvel at Venus, Mars, Jupiter, Saturn, Uranus, and Neptune gracing the night sky in a spectacular display.",
     date: "2025-June-25",
     location: "Infront of LHC - I",
-    image: "https://drive.google.com/file/d/1MUoFZv_cXdty5nLb52691kJ5Z6baGECT/view?usp=sharing",
+    image: "https://image2url.com/r2/default/images/1772105614046-31597ee9-1982-4d5c-9f98-7c0110e51c13.blob",
     status: "Completed"
   },
   {
@@ -15,7 +15,7 @@ export const events = [
     description: "This Full Moon night is special in itself, but as an added bonus, Saturn will also be visible on the same evening! With our telescope,Through our telescope, you’ll be able to observe firsthand:",
     date: "2025-Oct-06",
     location: "Infront of LHC - I",
-    image: "https://drive.google.com/file/d/0ByWp0TdLvSglSGl5QlpTcnJxVlE/view?usp=sharing&resourcekey=0-JELDPPt5FLA_ZT7SLR7VyQ",
+    image: "https://image2url.com/r2/default/images/1772105548369-bdf0ffca-56e6-4daa-ad61-053a8494715b.blob",
     status: "Completed"
   },
   {
@@ -23,8 +23,8 @@ export const events = [
     title: "Cansat|Rocketry Workshop",
     description: "Discover the basics of rocketry and CanSat design! Learn how miniature satellites are built, launched, and tested. Hands-on activities will guide you through the fundamentals of aerodynamics, propulsion, and payload integration. Exciting prizes await for innovative designs and successful launches.",
     date: "2025-Sep-24",
-    location: "Sports Ground",
-    image: "https://drive.google.com/file/d/10KK5MhcRhv912jfcracf7PBqzKQlPqbd/view?usp=sharing",
+    location: "LHC I",
+    image: "https://image2url.com/r2/default/images/1772105396820-60355c68-c04c-4e1a-855a-c545a10b3c0f.jpg",
     status: "Completed"
   },
   // {

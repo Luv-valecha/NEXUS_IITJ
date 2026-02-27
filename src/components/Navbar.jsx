@@ -88,24 +88,40 @@ export default function Navbar({ use3D, setUse3D }) {
                                 ))}
                                 <button
                                     onClick={() => setUse3D(!use3D)}
-                                    className="relative w-18 h-8 rounded-full bg-white/30 backdrop-blur-md shadow-lg transition-all duration-300"
+                                    className="relative w-20 h-9 rounded-full 
+                                            bg-gradient-to-r from-indigo-600 to-purple-600
+                                            shadow-lg shadow-purple-500/40
+                                            border-2 border-white/20
+                                            transition-all duration-300
+                                            hover:scale-105 active:scale-95"
                                 >
+                                    <span className="absolute -inset-5 rounded-full 
+                                                    bg-indigo-500/40 blur-xl 
+                                                    opacity-80 -z-10" />
+                                    {/* Toggle Knob */}
                                     <span
-                                        className={`absolute top-1 left-1 w-7 h-6 rounded-full bg-white shadow-xl
-                                                            transition-all duration-300 ease-out
-                                                            ${use3D ? "translate-x-9" : "translate-x-0"}`}
+                                        className={`absolute top-[0.4px] left-[1px] w-9 h-8 rounded-full 
+                                                bg-white shadow-md
+                                                transition-all duration-300 ease-out
+                                                ${use3D ? "translate-x-9" : "translate-x-0"}`}
                                     />
 
-                                    {/* Labels */}
+                                    {/* 2D Label */}
                                     <span
-                                        className={`absolute left-2 top-1/2 -translate-y-1/2 text-sm font-semibold transition-colors
-                                                            ${use3D ? "text-white/60" : "text-black"}`}
+                                        className={`absolute left-3 top-1/2 -translate-y-1/2 
+                                                    text-xs font-bold tracking-wide
+                                                    transition-colors duration-300
+                                                    ${use3D ? "text-white/60" : "text-black"}`}
                                     >
                                         2D
                                     </span>
+
+                                    {/* 3D Label */}
                                     <span
-                                        className={`absolute right-2 top-1/2 -translate-y-1/2 text-sm font-semibold transition-colors
-                                                            ${use3D ? "text-black" : "text-white/60"}`}
+                                        className={`absolute right-3 top-1/2 -translate-y-1/2 
+                                                    text-xs font-bold tracking-wide
+                                                    transition-colors duration-300
+                                                    ${use3D ? "text-black" : "text-white/60"}`}
                                     >
                                         3D
                                     </span>

@@ -10,6 +10,9 @@ export default function NASAEyes() {
           loading="lazy"
         />
       </div>
+      <div className="absolute bottom-4 right-6 text-s text-white/40 tracking-wide">
+        Credit: NASA
+      </div>
     </div>
   );
 }

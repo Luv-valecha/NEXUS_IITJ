@@ -20,7 +20,7 @@ export default function EventCard({ event, index }) {
                     <img
                         src={getRenderableImageUrl(event.image)}
                         alt={event.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-110"
+                        className="w-full h-full object-fit transition-transform duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-110"
                     />
 
 

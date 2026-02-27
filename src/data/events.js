@@ -6,7 +6,7 @@ export const events = [
     description: "This evening, we have a unique opportunity to observe a rare celestial event—a planetary alignment featuring six planets! Join us as we marvel at Venus, Mars, Jupiter, Saturn, Uranus, and Neptune gracing the night sky in a spectacular display.",
     date: "2025-June-25",
     location: "Infront of LHC - I",
-    image: "https://image2url.com/r2/default/images/1772105614046-31597ee9-1982-4d5c-9f98-7c0110e51c13.blob",
+    image: "https://drive.google.com/file/d/1BTuOtQ4XGbin3Y0g3DSMkMbX6oqfAj5F/view",
     status: "Completed"
   },
   {

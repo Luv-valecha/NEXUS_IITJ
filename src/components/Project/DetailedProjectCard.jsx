@@ -9,7 +9,7 @@ export default function DetailedProjectCard({ activeProject }) {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4 }}
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+      className="bg-[#121212]/15 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
     >
       {/* Image */}
       <div className="relative h-80 overflow-hidden">

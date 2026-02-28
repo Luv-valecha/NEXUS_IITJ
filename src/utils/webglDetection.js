@@ -26,5 +26,6 @@ export const isMobileScreen = (threshold = 768) => {
  * @returns {boolean} True if 3D scene should be shown
  */
 export const shouldRender3D = () => {
-  return isWebGLAvailable() && !isMobileScreen();
+  // return isWebGLAvailable() && !isMobileScreen();
+  return false;
 };

@@ -34,7 +34,7 @@ export default function Home() {
     { name: "Events", path: "/events", icon: <Calendar className="w-5 h-5" /> },
     { name: "Gallery", path: "/gallery", icon: <Image className="w-5 h-5" /> },
     { name: "Calendar", path: "/calendar", icon: <Calendar className="w-5 h-5" /> },
-    { name: "ISS Tracker", path: "/ISSTracker", icon: <Rocket className="w-5 h-5" /> }
+    { name: "Solar System", path: "/NASAEyes", icon: <Rocket className="w-5 h-5" /> }
   ];
 
   return (
@@ -124,14 +124,31 @@ export default function Home() {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="flex flex-wrap gap-4 justify-center"
             >
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="group flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/30 rounded-full text-gray-300 hover:text-white transition-all duration-300"
+                  className="group relative flex items-center gap-2 px-6 py-3 
+                 bg-[#121212]/60
+                 backdrop-blur-md
+                 border border-white/15
+                 rounded-full
+                 text-gray-300
+                 shadow-lg shadow-black/50
+                 transition-all duration-300
+                 hover:bg-black/80
+                 hover:border-white/40
+                 hover:text-white"
                 >
+                  <span className="absolute -inset-1.5 rounded-full 
+                       bg-white/20 blur-lg 
+                       opacity-60 -z-10 
+                       group-hover:opacity-90 transition" />
+
                   {link.icon}
-                  <span className="text-sm font-medium">{link.name}</span>
+                  <span className="text-sm font-medium tracking-wide">
+                    {link.name}
+                  </span>
                 </Link>
               ))}
             </motion.div>
@@ -139,7 +156,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1, repeat: Infinity, repeatType: "reverse" }}
@@ -148,7 +165,7 @@ export default function Home() {
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
             <div className="w-1 h-2 bg-white/60 rounded-full"></div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* Features Section */}
@@ -177,7 +194,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
+                className="group relative p-6 bg-[#121212]/25 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
@@ -258,7 +275,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      <TeamFooter links={socialLinks}/>
+      <TeamFooter links={socialLinks} />
     </div>
   );
 }

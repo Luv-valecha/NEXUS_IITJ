@@ -32,7 +32,7 @@ export default function Gallery() {
                         VISUAL <span className="text-[var(--accent-cyan)] text-glow">ARCHIVE</span>
                     </h1>
                     <p className="text-[var(--text-gray)] font-mono text-xs md:text-sm tracking-[0.3em] uppercase opacity-70">
-                        // Deep Space Imagery // Source: Club Telescopes
+                        // Deep Space Imagery //
                     </p>
                 </div>
                 <div className='ml-30 lg:ml-70'>

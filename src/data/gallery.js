@@ -1,4 +1,20 @@
 export const gallery = [
+     {
+        id: 3,
+        title: "Full Moon",
+        image: "https://drive.google.com/file/d/1V3B6WbHbAjhbed62BN-XIMe_Yp4sz1Qu/view",
+        source: "Club Telescope",
+        tag: "Moon",
+        credit: "Athul Hareethan Karayil"
+    },
+     {
+        id: 4,
+        title: "Half Moon",
+        image: "https://drive.google.com/file/d/1xEbRqSy5zdM9t6hq_2nPVQruVWbMByu1/view",
+        source: "Club Telescope",
+        tag: "Moon",
+        credit: "Shiv Jee Yadav"
+    },
     {
         id: 1,
         title: "Perseverance at Cheyava Falls",
@@ -16,36 +32,27 @@ export const gallery = [
         credit: "abc"
     },
     {
-        id: 3,
-        title: "Curiosity at Mars",
-        image: "https://images-assets.nasa.gov/image/PIA19920/PIA19920~orig.jpg",
-        source: "NASA/JPL-Caltech",
-        tag: "Mars",
-        credit: "abc"
-    },
-    {
-        id: 4,
-        title: "Earthrise",
-        image: "https://images-assets.nasa.gov/image/as08-14-2383/as08-14-2383~orig.jpg",
-        source: "NASA",
-        tag: "Apollo",
-        credit: "abc"
-    },
-    {
-        id: 5,
-        title: "The Blue Marble",
-        image: "https://images-assets.nasa.gov/image/PIA00114/PIA00114~orig.jpg",
-        source: "NASA/JPL",
-        tag: "Jupiter",
-        credit: "abc"
-    },
-    {
         id: 6,
         title: "Cassini's Saturn",
         image: "https://images-assets.nasa.gov/image/PIA18356/PIA18356~orig.jpg",
         source: "NASA/JPL",
         tag: "Saturn",
         credit: "abc"
+    },
+    {
+        id: 5,
+        title: "Mars",
+        image: "https://drive.google.com/file/d/1mufRUSQnEGln3hlkdx1LpfLqoAqrGTGn/view",
+        source: "Club Telescope",
+        tag: "Mars",
+        credit: "Club"
+    },{
+        id: 10,
+        title: "Saturn",
+        image: "https://drive.google.com/file/d/1_kW_TcmotQnViDDJTidmfh-tVZ9SvX3D/view",
+        source: "Club Telescope",
+        tag: "Saturn",
+        credit: "Club"
     },
     {
         id: 7,
@@ -71,21 +78,14 @@ export const gallery = [
         tag: "Sun",
         credit: "abc"
     },
-    {
-        id: 10,
-        title: "Pluto's Heart",
-        image: "https://images-assets.nasa.gov/image/PIA19952/PIA19952~orig.jpg",
-        source: "NASA/JHUAPL/SwRI",
-        tag: "Pluto",
-        credit: "abc"
-    },
+    
     {
         id: 11,
-        title: "Black Hole M87",
-        image: "https://images-assets.nasa.gov/image/PIA23122/PIA23122~orig.jpg",
-        source: "EHT Collaboration",
-        tag: "Black Hole",
-        credit: "abc"
+        title: "Jupiter",
+        image: "https://drive.google.com/file/d/1C8hVwksdtpMO-xBh5tyQjzPMe3G40iED/view",
+        source: "Club Telescope",
+        tag: "Saturn",
+        credit: "Club"
     },
     {
         id: 12,

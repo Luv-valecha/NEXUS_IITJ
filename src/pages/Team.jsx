@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { coordinators, coreTeam, Faculty, socialLinks, webTeam } from "../data/team";
+import { pastTeam2025_2026 } from "../data/teamPast";
 import TeamCard from "../components/Team/TeamCard";
 import CoreTeamCard from "../components/Team/CoreTeamCard"
 import FacultyCoordinatorCard from "../components/Team/FacultyCoordinatorCard";
@@ -106,33 +107,8 @@ const Team = () => {
         ))}
       </motion.div>
 
-      <div className="flex items-center justify-center gap-4 mt-20 mb-10">
-        <div className="h-px w-84 bg-gradient-to-r from-transparent via-blue-400 to-transparent
-                  shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
-
-        <motion.h2
-          variants={item}
-          custom={reduced}
-          className="text-3xl md:text-4xl font-bold text-white"
-        >
-          Web Team
-        </motion.h2>
-
-        <div className="h-px w-84 bg-gradient-to-r from-transparent via-blue-400 to-transparent
-                  shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
-      </div>
-
-      <motion.div
-        variants={container}
-        custom={reduced}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
-      >
-        {sortByImage(webTeam).map((member) => (
-          <CoreTeamCard key={member.id} member={member} />
-        ))}
-      </motion.div>
-
-      <div className="flex items-center justify-center gap-4 mt-20 mb-10">
+        {/* Faculty Advisor */}
+        <div className="flex items-center justify-center gap-4 mt-20 mb-10">
         <div className="h-px w-84 bg-gradient-to-r from-transparent via-blue-400 to-transparent
                   shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
 
@@ -154,6 +130,35 @@ const Team = () => {
       >
         <FacultyCoordinatorCard coordinator={Faculty} />
       </motion.div>
+
+      {/* Team 2025-2026 */}
+      <div className="flex items-center justify-center gap-4 mt-20 mb-10">
+        <div className="h-px w-84 bg-gradient-to-r from-transparent via-blue-400 to-transparent
+                  shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+
+        <motion.h2
+          variants={item}
+          custom={reduced}
+          className="text-3xl md:text-4xl font-bold text-white"
+        >
+          Team 2025-2026
+        </motion.h2>
+
+        <div className="h-px w-84 bg-gradient-to-r from-transparent via-blue-400 to-transparent
+                  shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+      </div>
+
+      <motion.div
+        variants={container}
+        custom={reduced}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-10 justify-items-center"
+      >
+        {sortByImage(pastTeam2025_2026).map((member) => (
+          <CoreTeamCard key={member.id} member={member} />
+        ))}
+      </motion.div>
+
+      
       <TeamFooter links={socialLinks} />
     </motion.section>
   );
